@@ -1,0 +1,15 @@
+@media all and (orientation:portrait) {
+	.footer {
+		position: absolute;
+        bottom: 0;
+	}
+
+}
+@media all and (orientation:landscape) {
+	.footer { 
+		position: relative;
+        margin-top: 5%;
+	}
+
+	
+}

@@ -1,0 +1,118 @@
+<!-- Inicio del Deposit Upload -->       
+<div data-role="view"  id="DepositUpload"   data-use-native-scrolling="true" data-init="DoGetBank">
+<!--top-nav-->
+                    <div class="top-nav">
+                    	 <div class="container">
+                    		 <div class="navigation">
+                                   <a onclick="Redirect('MainFrame.html');"> <div class="btn-back">
+                <img class="img-back" src="styles/images/back.png"/> Back
+                </div></a>
+                    		  <div class="logo">
+                                    <img width="50" src="styles/images/SMALogo.png">
+                    		 </div>
+                    		 <!-- <span class="menu"> </span> 
+                    			 <ul>
+                                 <li><a class="scroll" onclick ="Redirect('MainFrame.html'); return false;" >SEARCH INVOICES</a></li>
+                    			 <li><a class="scroll" href="#services">ID INVOICE UPLOAD</a></li>
+                    			 <li><a class="scroll" href="#services">ID INVOICE UPLOAD</a></li>
+                    			 <li><a class="scroll" href="#portfolio">STATEMENT REPORT</a></li>
+                    			 <li><a class="scroll" href="#about">CREATE DEPOSIT</a></li>
+                    			 <li><a class="scroll" href="#blog">VIEW DEPOSTI</a></li>
+                    			 <li><a class="scroll" href="#contact">EXIT</a></li>
+                    			 <div class="clear"></div>
+                    			 </ul> -->
+                    		 </div>
+                    		 <!-- script-nav-->
+                    						<script>
+                    					$("span.menu").click(function(){
+                    						$(".navigation ul").slideToggle("slow" , function(){
+                    						});
+                    					});
+                    				</script>
+                    			<!--script-nav-->
+
+                    	 </div>
+                    </div><!--top-nav ends-->
+                            <script>
+                                var d = new Date();
+                                var month = d.getMonth()+1;
+                                var day = d.getDate();
+                                var output = d.getFullYear() + '/' +
+                                ((''+month).length<2 ? '0' : '') + month + '/' +
+                                ((''+day).length<2 ? '0' : '') + day;
+                                document.getElementById("txtDateToBePosted").value = output;
+                            </script>
+                            <div class="content">
+                                <div class="top-grid">
+                    						<div class="clear"> </div>
+                                    <form>
+                                        <input type="hidden"  id="hidCompany" value="ALB" />
+                                        <label >Banks<br>
+                    	                <select id="ddlBank" class="dropdowns arrow-down"></select><br>
+                	                    </label>
+                                        <label >Account<br>
+                    	                <select id="ddlBankAccount" class="dropdowns arrow-down"></select>
+                	                    </label><br>
+                                        <input  type="date" class="formInput" placeholder="Expiration Date" id="txtDateToBePosted" >
+                                        <input type="text" placeholder="Total deposit" class="formInput" id="txtTotalDeposit"/>
+                                        <input type="text" placeholder="Description" class="formInput" id="txtDepositDescription"/>
+                                        <input type="text" placeholder="Check numbers" class="formInput" id="txtDepositCheckNumbers"/>
+                                        <!-- CheckBox -->
+                    					</form>
+                                    <div class="top-grid-right">
+							<div class="mainframe-tabel1 mainframe-tabel1-dark_blue">
+									<ul>
+										<li id="cmdUploadPhoto2"><a onclick="RunCamera();"><span class="uploadphoto-bg"></span>Upload a Photo</a><p>Upload a photo from your device</p></li>
+										<li id="cmdTakePhoto2"><a onclick="RunCamera(); "><span class="takephoto-bg"></span>Take a Photo</a><p>Take a photo with your device</p></li>
+									</ul>
+							</div>
+                                        <div class="clear"> </div>
+                   <div id="ShowPreviewDeposit" style="display: none">
+                       <br>
+                   <span style="color: white">Displaying preview image</span>
+                   <img id="DepositImage" style="width: 100%; height: 100%"/>
+                <div class="uploadID">
+                <a onclick="doDepositUpload()">Upload Deposit</a>
+                </div>                       
+                <div class="uploadID">
+                <a onclick="$.pgwModal('close');">Cancel</a>
+                </div>                                                     
+                       </div>    
+						</div>
+                    					</div>
+                             <canvas id="cs" style="display: none"></canvas>
+                            </div>
+                               
+                              
+                               
+                              <!-- Aqui Termina el Index -->
+                            
+                     <div id="floatingBarsG">
+                    <div class="blockG" id="rotateG_01">
+                    </div>
+                    <div class="blockG" id="rotateG_02">
+                    </div>
+                    <div class="blockG" id="rotateG_03">
+                    </div>
+                    <div class="blockG" id="rotateG_04">
+                    </div>
+                    <div class="blockG" id="rotateG_05">
+                    </div>
+                    <div class="blockG" id="rotateG_06">
+                    </div>
+                    <div class="blockG" id="rotateG_07">
+                    </div>
+                    <div class="blockG" id="rotateG_08">
+                    </div>
+                    </div> 
+                            <div class="footer" style="position: fixed">
+                                
+                                
+                               <div class="footer-bg">Copyright &copy; 2014 SMA Software llc. All rights reserved</div>
+                            </div>
+      
+     
+                               
+            </div>
+<!-- Fin del Deposit Upload -->
+

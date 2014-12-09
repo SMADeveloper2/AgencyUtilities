@@ -1,0 +1,150 @@
+   
+<!DOCTYPE html>
+<html>
+	
+	<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<link rel="shortcut icon" type="image/x-icon" href="styles/images/fav-icon.png" />
+	<!-- Kendo and JQuery Libraries -->
+    
+    <script src="cordova.js"></script>
+    <script src="kendo/js/jquery.min.js"></script>
+    <script src="kendo/js/kendo.mobile.min.js"></script>
+    
+    <script type="text/javascript" src="http://code.jquery.com/jquery.min.js"></script>
+    <script type="text/javascript" src="scripts/JQueryBasics/jquery.gallery.js"></script>
+    <script type="text/javascript" src="scripts/JQueryBasics/jquery.min.js"></script>
+    <script type="text/javascript" src="scripts/JQueryBasics/jquery.mixitup.min.js"></script>
+    
+    <!-- SMALibraries -->
+    <script type="text/javascript" src="scripts/SMA/SMAResources.js"></script>
+    <script type="text/javascript" src="scripts/SMA/SMALogin.js"></script>
+    <script type="text/javascript" src="scripts/SMA/SMAInvoiceSearch.js"></script>
+        
+    
+    <script type="text/javascript" src="scripts/Modals/pgwmodal.min.js"></script>
+    <!--General CSS -->    
+    
+    <link href="styles/General/style.css" rel="stylesheet" type="text/css"  media="all" />
+    <link href="styles/General/orientation.css" rel="stylesheet" type="text/css"  media="all" />
+    <link href="styles/Animation/checkstyle.css" rel="stylesheet" type="text/css"  media="all" />
+    <link href="styles/Animation/animate.css" rel="stylesheet" type="text/css"  media="all" />
+    <link href="styles/SMA/SMALoading.css" rel="stylesheet" type="text/css"  media="all" />
+    <link href="styles/Modals/pgwmodal.min.css" rel="stylesheet" type="text/css"  media="all" />
+	</head>
+	<body>
+   <!-- Inicia el IDInvoiceUpload --> 
+<div data-role="view"  id="DepositView"  data-init='DoGetDepositInfo()'data-use-native-scrolling="true" data-reload="true">
+<!--top-nav-->
+                    <div class="top-nav">
+                    	 <div class="container">
+                    		 <div class="navigation">
+                                <a onclick="Redirect('MainFrame.html');"> <div class="btn-back">
+                <img class="img-back" src="styles/images/back.png"/> Back
+                </div></a>
+                    		  <div class="logo">
+                                    <img width="50" src="styles/images/SMALogo.png">
+                    		 </div>
+                    		 <!-- <span class="menu"> </span> 
+                    			 <ul>
+                                 <li><a class="scroll" onclick ="Redirect('MainFrame.html'); return false;" >SEARCH INVOICES</a></li>
+                    			 <li><a class="scroll" href="#services">ID INVOICE UPLOAD</a></li>
+                    			 <li><a class="scroll" href="#services">ID INVOICE UPLOAD</a></li>
+                    			 <li><a class="scroll" href="#portfolio">STATEMENT REPORT</a></li>
+                    			 <li><a class="scroll" href="#about">CREATE DEPOSIT</a></li>
+                    			 <li><a class="scroll" href="#blog">VIEW DEPOSTI</a></li>
+                    			 <li><a class="scroll" href="#contact">EXIT</a></li>
+                    			 <div class="clear"></div>
+                    			 </ul> -->
+                    		 </div>
+                    		 <!-- script-nav-->
+                    						<script>
+                    					$("span.menu").click(function(){
+                    						$(".navigation ul").slideToggle("slow" , function(){
+                    						});
+                    					});
+                    				</script>
+                    			<!--script-nav-->
+
+                    	 </div>
+                    </div><!--top-nav ends-->
+
+                            
+                            <div class="content">
+                                <div class="top-grid">
+                    						<div class="clear"> </div>
+                                         <div style ="font-size:1em; float:center;display:block;text-align: center"  >
+            	<span style="color: white">Displaying only top 10 results</span><br>   
+            </div>
+            <ul id="DepositList" onclick="fade()">
+            <script type="text/x-kendo-template" id="DepositViewTemplate">                      
+                <div class="divspoiler" id="divspoiler" onclick="">
+                <div onclick="if (this.parentNode.nextSibling.childNodes[0].style.display != '') {this.parentNode.nextSibling.childNodes[0].style.display = '';} else { this.parentNode.nextSibling.childNodes[0].style.display = 'none';}">
+                <div style="position: absolute; left: 87%"><img class="item-photo" id="imgChange" src="styles/images/updown.png"></div>
+    			<h3 class="item-title">${Description}</h3>
+                <br/>
+                <p>Bank : ${Bank}</p>
+                </div>
+                </div><div><div class="spoiler" style="display: none;">
+                <input type="hidden"  id="hidAtrIdentityCode" value=${Code} />
+                <p>Account: ${Account}</p>
+                <p>Credit: ${Credit}</p>
+                <p>Date : ${RealDate}</p>
+                <p>Date Posted: ${DatePosted}</p>
+                <div class="uploadID">
+                <a onclick="DoShowDepositImage()">View Deposit</a>
+                </div>
+                
+                </div></div>
+			</script>
+            </ul>  
+            </div> 
+                <div id="ShowPreview2" style="display: none">
+                <br>
+                <span style="color: white">Displaying Deposit image</span>
+                <img id="smallPrevImage" style="width: 100%; height: 100%"/>                      
+                <div class="uploadID">
+                <a onclick="$.pgwModal('close');">Close</a>
+                </div>                                                     
+                       </div>    
+						</div>
+
+                   					</div>
+                           
+<!-- Aqui Termina el Index -->
+                            
+                     <div id="floatingBarsG">
+                    <div class="blockG" id="rotateG_01">
+                    </div>
+                    <div class="blockG" id="rotateG_02">
+                    </div>
+                    <div class="blockG" id="rotateG_03">
+                    </div>
+                    <div class="blockG" id="rotateG_04">
+                    </div>
+                    <div class="blockG" id="rotateG_05">
+                    </div>
+                    <div class="blockG" id="rotateG_06">
+                    </div>
+                    <div class="blockG" id="rotateG_07">
+                    </div>
+                    <div class="blockG" id="rotateG_08">
+                    </div>
+                    </div> 
+    
+      
+      
+                            <div class="footer">
+                                <div class="submit">
+                                        </div>
+                               
+                               <div class="footer-bg">Copyright &copy; 2014 SMA Software llc. All rights reserved</div>
+                            </div>
+      
+     
+                               
+          
+  <!-- Termina el IDInvoiceUpload -->
+
+</body>
+</html>

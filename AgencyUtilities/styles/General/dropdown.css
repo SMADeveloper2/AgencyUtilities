@@ -1,0 +1,137 @@
+
+
+.k-animation-container{
+    -moz-box-sizing:border-box;
+    -webkit-box-sizing:border-box;
+    box-sizing:border-box
+}
+
+.km-popup {
+background: rgba(0,0,0,0.4);
+}
+
+.km-popup {
+left: 0!important;
+top: 0!important;
+width: 100%!important;
+height: 100%!important;
+-moz-box-sizing: border-box;
+-webkit-box-sizing: border-box;
+box-sizing: border-box;
+}
+.km-popup .k-list-container {
+background: transparent;
+bottom: 0;
+border: 0;
+border-radius: 0;
+-moz-box-sizing: border-box;
+-webkit-box-sizing: border-box;
+box-sizing: border-box;
+}
+
+.km-popup .k-list-container {
+max-height: 80%;
+}
+
+.km-popup .k-list-container {
+width: 100%!important;
+height: auto!important;
+}
+
+km-popup .k-popup {
+font-size: 1em;
+}
+
+.km-popup .k-popup {
+background: transparent;
+padding: 0 .5em;
+color: white;
+}
+
+
+.km-horizontal-scrollbar {
+width: 100%;
+height: 3px;
+}
+
+.km-touch-scrollbar {
+border: 0;
+width: 3px;
+border-radius: 1em;
+}
+
+.km-touch-scrollbar {
+background-color: #919191;
+}
+
+.km-popup .k-item:first-child, .km-actionsheet>li:nth-child(2)>a {
+border-top-left-radius: 3px;
+border-top-right-radius: 3px;
+}
+
+.km-popup .k-item, .k-slider-selection, .km-actionsheet>li>a {
+color: inherit;
+}
+
+.km-popup .k-item, .km-actionsheet>li>a {
+background: url(../images/ul-bg.png);
+border-bottom-color: #FFF;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.km-popup .k-item, .km-actionsheet>li>a:hover {
+background: #173849;
+border-bottom-color: rgba(180,180,180,0.5);
+}
+
+.km-popup .k-item, .km-actionsheet>li>a {
+font-size: 1.3em;
+font-weight: normal;
+text-align: center;
+text-decoration: none;
+padding: .3em 0;
+border: 0;
+border-radius: 0;
+border-bottom-width: 1px;
+border-bottom-style: solid;
+-moz-box-sizing: border-box;
+-webkit-box-sizing: border-box;
+box-sizing: border-box;
+}
+
+.km-popup .k-state-focused, .km-popup .k-state-selected, .km-actionsheet>li>a:active, .km-actionsheet>li>a:hover, li.km-state-active .km-listview-link, li.km-state-active .km-listview-label {
+background: #d9d9d9;
+}
+
+
+select:not([multiple]), .k-dropdown .k-dropdown-wrap {
+border-bottom-color: rgba(127,127,127,0.5);
+background: 100% 100% no-repeat url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAACWCAQAAABj2vCcAAAACXBI…lqGWoZahlqGWoZahlqGWoZahlqOUq5CrkKuStlKuS3QdJPtFaleZ1DgAAAABJRU5ErkJggg==") transparent;
+background-size: auto 100%;
+}
+
+
+
+.dropdowns {
+border: 1px solid rgba(76, 76, 76, 0.45);
+font-size: 1.1em;
+font-weight: 300;
+outline: none;
+color: white;
+-webkit-box-shadow: 0px 0px 5px 0px rgba(38, 139, 245, 0.75);
+-moz-box-shadow: 0px 0px 5px 0px rgba(38, 139, 245, 0.75);
+box-shadow: 0px 0px 5px 0px rgba(38, 139, 245, 0.75);
+font-family: Trebuchet MS;
+border: 1px solid #5D75AE;
+margin-bottom: 10px;
+text-align: center;
+display: inline-block;
+background: transparent;
+width: 84%;
+padding: 0.5em;
+}
+.arrow-down{
+    background: url(../images/select-down.png) no-repeat scroll 98% 9px;
+}
+.k-icon{display: none}

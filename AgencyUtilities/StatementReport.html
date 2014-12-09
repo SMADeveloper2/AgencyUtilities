@@ -1,0 +1,51 @@
+<html>
+<head>
+<link href="http://www.jqueryscript.net/demo/Responsive-Pie-Chart-Plugin-wit-jQuery-Snap-SVG-Pizza/stylesheets/pizza.css" media="screen, projector, print" rel="stylesheet" type="text/css" />
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="http://www.jqueryscript.net/demo/Responsive-Pie-Chart-Plugin-wit-jQuery-Snap-SVG-Pizza/javascripts/vendor/snap.svg.js"></script> 
+<script src="http://www.jqueryscript.net/demo/Responsive-Pie-Chart-Plugin-wit-jQuery-Snap-SVG-Pizza/javascripts/pizza.js"></script>
+</head>
+<body>
+<script>
+$(window).load(function() {
+Pizza.init();
+})
+</script>
+<ul data-pie-id="svg">
+<!-- Blue item -->
+<li data-value="116" id="AgencyCredit">jQuery <a href="http://www.jqueryscript.net/slider/">Slider</a> Plugins (116)</li>
+<!-- Lavanda item -->
+<li data-value="119" id ="AgencyDebit" >jQuery <a href="http://www.jqueryscript.net/animation/">Animation</a> Plugins (119)</li>
+<!-- Lavanda item -->
+<li data-value="52">jQuery Lightbox Plugins (62)</li>
+<!-- Fucsia item -->
+<li data-value="25">jQuery <a href="http://www.jqueryscript.net/tooltip/">Tooltip</a> Plugins (25)</li>
+<!-- Red item -->
+<li data-value="18">jQuery Mobile Plugins (18)</li>
+</ul>
+    <ul id="StatementReportList" onclick="fade()">
+            <script type="text/x-kendo-template" id="StatementReportTemplate">                      
+                <div class="divspoiler" id="divspoiler" onclick="">
+                <div onclick="if (this.parentNode.nextSibling.childNodes[0].style.display != '') {this.parentNode.nextSibling.childNodes[0].style.display = '';} else { this.parentNode.nextSibling.childNodes[0].style.display = 'none';}">
+                <div style="position: absolute; left: 87%"><img class="item-photo" id="imgChange" src="styles/images/updown.png"></div>
+    			<h3 class="item-title">${Description}</h3>
+                <br/>
+                <p>Bank : ${Bank}</p>
+                </div>
+                </div><div><div class="spoiler" style="display: none;">
+                <input type="hidden"  id="hidAtrIdentityCode" value=${Code} />
+                <p>Account: ${Account}</p>
+                <p>Credit: ${Credit}</p>
+                <p>Date : ${RealDate}</p>
+                <p>Date Posted: ${DatePosted}</p>
+                <div class="uploadID">
+                <a onclick="DoShowDepositImage()">View Deposit</a>
+                </div>
+                
+                </div></div>
+			</script>
+            </ul> 
+    
+<div id="svg"></div>
+</body>
+</html>

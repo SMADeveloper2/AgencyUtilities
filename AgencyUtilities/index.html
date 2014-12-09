@@ -1,0 +1,131 @@
+<!--
+Author: W3layouts
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE html>
+<html class="fade">
+	
+	<head>
+	<!-- Kendo and JQuery Libraries -->
+    
+    <script src="cordova.js"></script>
+    <script src="kendo/js/jquery.min.js"></script>
+    <script src="kendo/js/kendo.mobile.min.js"></script>
+    <script src="kendo/js/kendo.all.min.js"></script>
+        <link href="styles/General/dropdown.css" rel="stylesheet" />
+        
+        
+    
+        
+        
+    
+    
+    <!-- SMALibraries -->
+    <script type="text/javascript" src="scripts/SMA/SMAResources.js"></script>
+    <script type="text/javascript" src="scripts/SMA/SMALogin.js"></script>
+        <script type="text/javascript" src="scripts/SMA/SMAInvoiceSearch.js"></script>
+    <!-- Other Libraries -->    
+    <script type="text/javascript" src="scripts/ResponsiveMenu/easing.js"></script>
+    <script type="text/javascript" src="scripts/ResponsiveMenu/modernizr.custom.53451.js"></script>
+    <script type="text/javascript" src="scripts/ResponsiveMenu/move-top.js"></script>
+    <script type="text/javascript" src="scripts/ResponsiveMenu/responsiveslides.min.js"></script>
+    <script type="text/javascript" src="scripts/ResponsiveMenu/wow.min.js"></script>
+    <script type="text/javascript" src="scripts/Modals/pgwmodal.min.js"></script>
+    <script type="text/javascript" src="scripts/Camera/Camera.js"></script>
+    <script type="text/javascript" src="scripts/SMA/SMAIDPhotoUpload.js"></script>
+    <script type="text/javascript" src="scripts/SMA/SMADepositUpload.js"></script>
+    <script type="text/javascript" src="scripts/SMA/SMADepostiView.js"></script>
+        
+        
+    <!--General CSS -->    
+    
+    <link href="styles/General/style.css" rel="stylesheet" type="text/css"  media="all" />
+    <link href="styles/General/main.css" rel="stylesheet" type="text/css"  media="all" />
+    <link href="styles/General/orientation.css" rel="stylesheet" type="text/css"  media="all" />
+    <link href="styles/Animation/checkstyle.css" rel="stylesheet" type="text/css"  media="all" />
+    <link href="styles/Animation/animate.css" rel="stylesheet" type="text/css"  media="all" />
+    <link href="styles/SMA/SMALoading.css" rel="stylesheet" type="text/css"  media="all" />
+    <link href="styles/Modals/pgwmodal.min.css" rel="stylesheet" type="text/css"  media="all" />
+       
+	</head>
+	<body>
+        
+        
+        <!-- Aqui va el inicio del Index -->
+        
+  <div data-role="view"  id="Index" data-use-native-scrolling="true">
+<!--top-nav ends-->
+                            
+                            
+                            <div class="content">
+                                <div class="top-grid">
+                                    <br>
+                    						<div class="top-grid-left icon5">
+                    							<span> </span>
+                    						</div>
+                    						<div class="top-grid-right">
+                    							<h2>Login</h2>
+                    						</div>
+                    						<div class="clear"> </div>
+                                    <form>
+                                        <input type="hidden"  id="hidCompany" value="ALB" />
+                                        <input type="hidden"  id="hidAgencyUser"  />
+                                        <input type="text" id="txtAgencyCode" class="formInput agency" placeholder="Agency code" required >
+                                        <input type="text" id="txtUsername"  class="formInput user" placeholder="Username" required >
+                                        <input type="password"  id="txtPassword"  class="formInput password" placeholder="Password" required>
+                                        <!-- CheckBox -->
+                                        <div class="top-grid-right">
+                    							<h2>Remember me</h2>
+                    						</div>
+                                        <div class="checkbox"> 
+	                                    <input id="check" name="1" type="checkbox" value="0" onclick="SetRemember()" /> 
+                                        <label for="check">Check-me</label> 
+                                        </div> 
+                    					</form>
+                    					</div>
+                            </div>
+                               
+                              
+                               
+                              <!-- Aqui Termina el Index -->
+                            
+                     <div id="floatingBarsG">
+                    <div class="blockG" id="rotateG_01">
+                    </div>
+                    <div class="blockG" id="rotateG_02">
+                    </div>
+                    <div class="blockG" id="rotateG_03">
+                    </div>
+                    <div class="blockG" id="rotateG_04">
+                    </div>
+                    <div class="blockG" id="rotateG_05">
+                    </div>
+                    <div class="blockG" id="rotateG_06">
+                    </div>
+                    <div class="blockG" id="rotateG_07">
+                    </div>
+                    <div class="blockG" id="rotateG_08">
+                    </div>
+                    </div> 
+                            <div class="footer">
+                                <div class="submit">
+                                        <input type="submit" value="LOGIN"  id="button-blue" onclick ="Login(); return false;"/>
+                                        </div>
+                                
+                               <div class="footer-bg">Copyright &copy; 2014 SMA Software llc. All rights reserved</div>
+                            </div>
+      
+      <script>
+function getValue()
+  {
+  var x=document.getElementById("txtAgencyCode");
+  alert(x.value);
+  }
+</script>
+                               
+            </div>
+	</body>
+</html>
+

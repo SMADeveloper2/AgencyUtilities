@@ -1,0 +1,151 @@
+<!--
+Author: W3layouts
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE html>
+<html>
+	
+	<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<link rel="shortcut icon" type="image/x-icon" href="styles/images/fav-icon.png" />
+	<!-- Kendo and JQuery Libraries -->
+    
+    <script src="cordova.js"></script>
+    <script src="kendo/js/jquery.min.js"></script>
+    <script src="kendo/js/kendo.mobile.min.js"></script>
+    
+    <script type="text/javascript" src="http://code.jquery.com/jquery.min.js"></script>
+    <script type="text/javascript" src="scripts/JQueryBasics/jquery.gallery.js"></script>
+    <script type="text/javascript" src="scripts/JQueryBasics/jquery.min.js"></script>
+    <script type="text/javascript" src="scripts/JQueryBasics/jquery.mixitup.min.js"></script>
+    
+    <!-- SMALibraries -->
+    <script type="text/javascript" src="scripts/SMA/SMAResources.js"></script>
+    <script type="text/javascript" src="scripts/SMA/SMALogin.js"></script>
+    <script type="text/javascript" src="scripts/SMA/SMAInvoiceSearch.js"></script>
+        
+    
+    <script type="text/javascript" src="scripts/Modals/pgwmodal.min.js"></script>
+    <!--General CSS -->    
+    
+    <link href="styles/General/style.css" rel="stylesheet" type="text/css"  media="all" />
+    <link href="styles/General/orientation.css" rel="stylesheet" type="text/css"  media="all" />
+    <link href="styles/Animation/checkstyle.css" rel="stylesheet" type="text/css"  media="all" />
+    <link href="styles/Animation/animate.css" rel="stylesheet" type="text/css"  media="all" />
+    <link href="styles/SMA/SMALoading.css" rel="stylesheet" type="text/css"  media="all" />
+    <link href="styles/Modals/pgwmodal.min.css" rel="stylesheet" type="text/css"  media="all" />
+	</head>
+	<body>
+        
+        
+   <!-- Inicia el IDInvoiceUpload --> 
+  <div data-role="view"  id="InvoiceSearch"  data-init='DoGetStatusList' data-use-native-scrolling="true" >
+<!--top-nav-->
+                    <div class="top-nav">
+                    	 <div class="container">
+                    		 <div class="navigation">
+                                 <div class="btn-back">
+                <a onclick="Redirect('MainFrame.html')"><img class="img-back" src="styles/images/back.png"/> Back</a>
+                </div>
+                    		  <div class="logo">
+                                    <img width="50" src="styles/images/SMALogo.png">
+                    		 </div>
+                    		 <!-- <span class="menu"> </span> 
+                    			 <ul>
+                                 <li><a class="scroll" onclick ="Redirect('MainFrame.html'); return false;" >SEARCH INVOICES</a></li>
+                    			 <li><a class="scroll" href="#services">ID INVOICE UPLOAD</a></li>
+                    			 <li><a class="scroll" href="#services">ID INVOICE UPLOAD</a></li>
+                    			 <li><a class="scroll" href="#portfolio">STATEMENT REPORT</a></li>
+                    			 <li><a class="scroll" href="#about">CREATE DEPOSIT</a></li>
+                    			 <li><a class="scroll" href="#blog">VIEW DEPOSTI</a></li>
+                    			 <li><a class="scroll" href="#contact">EXIT</a></li>
+                    			 <div class="clear"></div>
+                    			 </ul> -->
+                    		 </div>
+                    		 <!-- script-nav-->
+                    						<script>
+                    					$("span.menu").click(function(){
+                    						$(".navigation ul").slideToggle("slow" , function(){
+                    						});
+                    					});
+                    				</script>
+                    			<!--script-nav-->
+
+                    	 </div>
+                    </div><!--top-nav ends-->
+
+                            
+                            
+                            <div class="content">
+                                <div class="top-grid">
+                                            <label>Status <br>
+                                                    <select id="ddlStatus"    class="dropdowns arrow-down">
+                                                        
+                                                    </select>
+                                            </label>
+                    						<div class="clear"> </div>
+                                    <form>
+                                         <input type="hidden"  id="hidCompany" value="ALB" />
+                                         <input type="text"  id="txtTransactionNumber"  class="formInput" placeholder="Transaction Number" >
+                                         <input type="text"  id="txtFolio"  class="formInput" placeholder="Folio" >
+                                        <input type="text" id="txtSenderName" class="formInput" placeholder="Sender Name">
+                                        <input type="text" id="txtRecipientName"  class="formInput" placeholder="Recipient Name" >
+                                        <br>
+                                         
+                                        
+                    					</form>
+                    					</div>
+                            </div>
+<!-- Aqui Termina el Index -->
+                            
+                     <div id="floatingBarsG">
+                    <div class="blockG" id="rotateG_01">
+                    </div>
+                    <div class="blockG" id="rotateG_02">
+                    </div>
+                    <div class="blockG" id="rotateG_03">
+                    </div>
+                    <div class="blockG" id="rotateG_04">
+                    </div>
+                    <div class="blockG" id="rotateG_05">
+                    </div>
+                    <div class="blockG" id="rotateG_06">
+                    </div>
+                    <div class="blockG" id="rotateG_07">
+                    </div>
+                    <div class="blockG" id="rotateG_08">
+                    </div>
+                    </div> 
+                            <div class="footer">
+                                
+                                    
+                                       
+                                
+                                <div class="submit">
+                                        <a onclick="doSearch(); return false;"><input type="submit" value="SEARCH"  id="button-blue"/></a>
+                                        </div>
+                               <div class="footer-bg">Copyright &copy; 2014 SMA Software llc. All rights reserved</div>
+                            </div>
+      
+     
+                               
+            </div>
+  <!-- Termina el IDInvoiceUpload -->
+        
+        
+        
+        
+        
+        
+        
+        
+    
+    
+    
+     
+	    
+        </body>
+</html>
+
